@@ -13,3 +13,12 @@
 .externalNativeBuild
 .cxx
 local.properties
+/.idea/vcs.xml
+/.idea/codeStyles/Project.xml
+/.idea/misc.xml
+/.idea/jarRepositories.xml
+/gradle/wrapper/gradle-wrapper.properties
+/gradle/wrapper/gradle-wrapper.jar
+/.idea/gradle.xml
+/.idea/compiler.xml
+/.idea/codeStyles/codeStyleConfig.xml
