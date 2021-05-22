@@ -1,23 +1,18 @@
 package com.example.unittesting
 
-import androidx.core.util.PatternsCompat
-
-/**
- * Created by EmreHamurcu on 3/11/2021.
- */
 object Validator {
+    private const val PASSWORD_MIN_COUNT = 5
 
-    private val existingUser = listOf("emre", "ali", "ela")
-
-    fun signupValidator(
-        userName: String,
-        password: String,
-        confirmedPassword: String
-    ): Boolean {
-        if (userName.isEmpty() || password.isEmpty()) return false
-        if (userName in existingUser) return false
-        if (password != confirmedPassword) return false
-        if (password.count { it.isDigit() } < 2) return false
-        return true
+    /**
+     * @param userRegister data class to be validate
+     */
+    fun registerValidator(userRegister: UserRegister): Boolean {
+        userRegister.apply {
+            if (userName.isEmpty()) return false
+            if (password.isEmpty()) return false
+            if (password != confirmedPassword) return false
+            if (password.length < PASSWORD_MIN_COUNT) return false
+            return true
+        }
     }
 }
